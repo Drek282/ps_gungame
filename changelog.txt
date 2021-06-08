@@ -1,0 +1,5 @@
+--- DREK ---
+
+
+Version 3.2.8b (in progress)
+[Changed] Gun Game support officially dropped.  Code is untested.
