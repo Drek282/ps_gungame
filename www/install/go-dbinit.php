@@ -100,7 +100,7 @@ foreach ($list as $k) {
 		$modtype[] = $k;
 	}
 }
-//if (!$modtype) $modtype[] = 'cstrike';
+//if (!$modtype) $modtype[] = 'gungame';
 
 
 $cms->theme->assign(array(
