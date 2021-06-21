@@ -29,7 +29,7 @@ if (!defined("PSYCHOSTATS_PAGE")) die("Unauthorized access to " . basename(__FIL
 if (defined("CLASS_PS_HALFLIFE_GUNGAME_PHP")) return 1;
 define("CLASS_PS_HALFLIFE_GUNGAME_PHP", 1);
 
-include_once(dirname(__DIR__) . '/halflife/cstrike.php');
+include_once(rtrim(dirname(__DIR__), '/\\') . '/halflife/cstrike.php');
 
 class PS_halflife_gungame extends PS_halflife_cstrike {
 
