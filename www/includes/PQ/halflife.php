@@ -64,12 +64,12 @@ define("PQ_HL2_SERVERDATA_RESPONSE_VALUE", 	0);
 class PQ_halflife extends PQ_PARENT {
 
 function __construct($conf) {
-	$this->PQ_halflife($conf);
+	$this->conf = $conf;		// always save the config to the class variable first
+	$this->init();			// always run the class initialization method
 }
 
 function PQ_halflife($conf) {
-	$this->conf = $conf;		// always save the config to the class variable first
-	$this->init();			// always run the class initialization method
+    self::__construct($conf);
 }
 
 function init() {
@@ -96,9 +96,6 @@ function modtype() {
 	$m = $this->data['gamedir'];
 	switch ($m) {
 		case 'czero': 	return 'cstrike';
-		case 'hl2dm': 	return 'hldm';
-		case 'ns': 	return 'natural';
-		case 'tf':	return 'tf2';
 		default: 	return $m;
 	}
 	return $m;

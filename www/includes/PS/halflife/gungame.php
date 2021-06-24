@@ -39,7 +39,7 @@ var $class = 'PS::halflife::gungame';
 // from the cstrike subclass.
 //var $CLAN_MODTYPES = array();
 
-function PS_halflife_gungame(&$db) {
+function __construct(&$db) {
 	parent::PS_halflife_cstrike($db);
 	// add gungame specific variables to the list
 	$this->CLAN_MODTYPES += array(
@@ -57,6 +57,10 @@ function PS_halflife_gungame(&$db) {
 		'lvlspergame'		=> array( 'ratio', 'lvlsgained', 'games' ),
 	);
 	$this->CLAN_MAP_MODTYPES = $this->CLAN_MODTYPES;
+}
+
+function PS_halflife_gungame(&$db) {
+    self::__construct($db);
 }
 
 // extra map stats specific for the mod
