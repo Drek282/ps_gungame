@@ -109,7 +109,7 @@ function player_left_column_mod(&$plr, &$theme) {
 		}
 		
 		// remove actions that are not relevant to GG
-		//unset($actions['bombexploded'], $actions['bombdefused'],$actions['rescuedhostages'],...);
+		unset($actions['bombexploded'], $actions['bombdefused'],$actions['rescuedhostages']);
 		
 		$actions['winsgained'] = array(
 			'label'	=> $cms->trans("Wins Gained"),
